@@ -7,8 +7,10 @@ import Container from "@/components/ui/container"
 export const revalidate = 0
 
 const HomePage = async () => {
+  const billboardId = process.env.BILLBOARD
   const products = await getProducts({ isFeatured: true });
-  const billboard = await getBillboard("f58b023c-9db4-447f-99d9-8390a80af6f0")
+  const billboard = await getBillboard(`${billboardId}`)
+  // const billboard = await getBillboard("f58b023c-9db4-447f-99d9-8390a80af6f0")
 
   return (
     <Container>
