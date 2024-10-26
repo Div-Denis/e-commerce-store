@@ -6,6 +6,9 @@ import CartItem from "./components/cart-item";
 import Summary from "./components/summary";
 import { useEffect, useState } from "react";
 
+export const runtime = 'edge';
+
+
 const Cart = () => {
     const [isMounted, setMounted] = useState(false)
     const cart = useCart()
