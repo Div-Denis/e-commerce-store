@@ -4,7 +4,7 @@ import Billboard from "@/components/billboard"
 import ProductList from "@/components/product-list"
 import Container from "@/components/ui/container"
 
-export const runtime = 'edge';
+// export const runtime = 'edge';
 export const revalidate = 0
 
 const HomePage = async () => {

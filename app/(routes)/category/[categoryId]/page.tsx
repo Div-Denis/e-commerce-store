@@ -11,7 +11,7 @@ import ProductCard from "@/components/ui/product-card";
 import MobileFilters from "./components/mobile-filters";
 import Filter from "./components/filter";
 
-export const runtime = 'edge';
+// export const runtime = 'edge';
 export const revalidate = 0
 
 interface CategoryPageProps {
