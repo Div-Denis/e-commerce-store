@@ -5,6 +5,7 @@ import ProductList from "@/components/product-list"
 import Container from "@/components/ui/container"
 
 export const revalidate = 0
+export const runtime = 'edge';
 
 const HomePage = async () => {
   const billboardId = process.env.BILLBOARD
