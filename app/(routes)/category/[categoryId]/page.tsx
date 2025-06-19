@@ -14,15 +14,14 @@ import Filter from "./components/filter";
 export const runtime = 'edge';
 export const revalidate = 0
 
-type Props = {
-  params: { categoryId: string }
-  searchParams?: { colorId?: string; sizeId?: string }
-};
 
 const CategoryPage = async ({
     params,
     searchParams,
-}: Props)=> {
+}: {
+  params: { categoryId: string }
+  searchParams?: { colorId?: string; sizeId?: string }
+})=> {
     const products = await getProducts({
         categoryId: params.categoryId,
         colorId: searchParams?.colorId,
