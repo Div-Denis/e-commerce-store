@@ -9,9 +9,7 @@ export const runtime = 'edge';
 
 const ProductPage: React.FC<ProductPageprops> = async ({
     params
-}: {
-    params: {productId: string}
-}) => {
+}: any) => {
     const product = await getProduct(params.productId)
     const suggestedProducts = await getProducts({
         categoryId: product?.category?.id
