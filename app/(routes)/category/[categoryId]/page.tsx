@@ -17,9 +17,6 @@ export const revalidate = 0
 const CategoryPage = async ({
     params,
     searchParams,
-} : {
-    params : { categoryId: string }
-    searchParams?: { colorId?: string; sizeId?: string }
 })=> {
     const products = await getProducts({
         categoryId: params.categoryId,
