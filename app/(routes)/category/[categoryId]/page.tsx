@@ -31,9 +31,11 @@ const CategoryPage = async ({
     return ( 
         <div className="bg-white">
             <Container>
-                <Billboard 
-                  data={category.billboard}
-                />
+                {category ? (
+                  <Billboard data={category.billboard} />
+                ) : (
+                  <div className="text-center text-gray-400 py-10">No category found.</div>
+                )}
                 <div className="px-4 sm:px-6 lg:px-8 pb-24">
                     <div className="lg:grid lg:grid-cols-5 lg:gap-x-8">
                         {/* Add Mobile Filters */}
