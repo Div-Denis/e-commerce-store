@@ -14,24 +14,17 @@ import Filter from "./components/filter";
 export const runtime = 'edge';
 export const revalidate = 0
 
-interface CategoryPageProps {
-    params: {
-        categoryId: string
-    },
-    searchParams: {
-        colorId: string;
-        sizeId: string;
-    }
-}
-
-const CategoryPage: React.FC<CategoryPageProps> = async ({
+const CategoryPage = async ({
     params,
     searchParams,
-}) => {
+} : {
+    params : { categoryId: string }
+    searchParams?: { colorId?: string; sizeId?: string }
+})=> {
     const products = await getProducts({
         categoryId: params.categoryId,
-        colorId: searchParams.colorId,
-        sizeId: searchParams.sizeId
+        colorId: searchParams?.colorId,
+        sizeId: searchParams?.sizeId
     })
     const sizes = await getSizes();
     const colors = await getColors();
