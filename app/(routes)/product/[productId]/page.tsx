@@ -7,7 +7,7 @@ import Container from "@/components/ui/container";
 
 export const runtime = 'edge';
 
-const ProductPage: React.FC<ProductPageprops> = async ({
+const ProductPage = async ({
     params
 }: any) => {
     const product = await getProduct(params.productId)
